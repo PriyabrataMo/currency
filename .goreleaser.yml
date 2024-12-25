@@ -20,13 +20,13 @@ archives:
   - format: tar.gz
 
 brews:
-  - name: tasks
+  - name: currency
     homepage: https://github.com/PriyabrataMo/currency
     description: A simple CLI for currency conversion
     license: MIT
     repository:
       owner: PriyabrataMo
-      name: homebrew-currency
+      name: homebrew-taps
     commit_author:
       name: Priyabrata
       email: priyabrata8558@gmail.com
