@@ -31,4 +31,4 @@ jobs:
           args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.PUBLISHER_TOKEN }}
-          API_KEY: ${{ secrets.API_KEY }} # Inject API key from GitHub Secrets
+          API_KEY: ${{ secrets.API_KEY }}

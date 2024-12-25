@@ -10,6 +10,7 @@ import (
 	"github.com/joho/godotenv"
 	"io"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
 	"strconv"
@@ -58,7 +59,7 @@ func main() {
 			huh.NewSelect[string]().
 				Title("Choose the currency you want to convert from").
 				Options(
-						huh.NewOptions("INR", "USD", "EUR", "GBP", "JPY")...).
+					huh.NewOptions("INR", "USD", "EUR", "GBP", "JPY")...).
 				Value(&cur1), // store the chosen option in the "burger" variable
 
 			huh.NewSelect[string]().
@@ -144,6 +145,9 @@ func loading(s int) {
 func fetchAnswer(result chan float64, done chan bool) {
 	err := godotenv.Load()
 	apikey := os.Getenv("API_KEY")
+	if apikey == "" {
+		log.Fatal("API_KEY is not set")
+	}
 	res, err := http.Get("https://api.exchangeratesapi.io/v1/latest?access_key=" + apikey)
 	if err != nil {
 		panic(err)
