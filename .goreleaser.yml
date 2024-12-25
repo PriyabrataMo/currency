@@ -1,0 +1,35 @@
+version: 2
+
+builds:
+  - binary: currency
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -mod=vendor
+
+release:
+  prerelease: auto
+
+archives:
+  - format: tar.gz
+
+brews:
+  - name: tasks
+    homepage: https://github.com/PriyabrataMo/currency
+    description: A simple CLI for currency conversion
+    license: MIT
+    repository:
+      owner: PriyabrataMo
+      name: homebrew-currency
+    commit_author:
+      name: Priyabrata
+      email: priyabrata8558@gmail.com
+
+checksum:
+  name_template: 'checksums.txt'
