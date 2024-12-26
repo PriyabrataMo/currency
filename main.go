@@ -59,7 +59,7 @@ func main() {
 			huh.NewSelect[string]().
 				Title("Choose the currency you want to convert from").
 				Options(
-					huh.NewOptions("INR", "USD", "EUR", "GBP", "JPY")...).
+						huh.NewOptions("INR", "USD", "EUR", "GBP", "JPY")...).
 				Value(&cur1), // store the chosen option in the "burger" variable
 
 			huh.NewSelect[string]().
