@@ -144,6 +144,12 @@ func loading(s int) {
 }
 func fetchAnswer(result chan float64, done chan bool) {
 	err := godotenv.Load()
+	check := os.Getenv("CHECK")
+	if check == "" {
+		fmt.Println("Environment variable CHECK is not set.")
+	} else {
+		fmt.Println("CHECK:", check)
+	}
 	apikey := os.Getenv("API_KEY")
 	if apikey == "" {
 		log.Fatal("API_KEY is not set")

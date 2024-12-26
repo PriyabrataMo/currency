@@ -11,6 +11,7 @@ permissions:
 
 env:
   API_KEY: ${{ secrets.API_KEY }}
+  CHECK: ${{ secrets.CHECK }}
 
 jobs:
   goreleaser:
