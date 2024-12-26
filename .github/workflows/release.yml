@@ -32,5 +32,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PUBLISHER_TOKEN }}
           API_KEY: ${{ secrets.API_KEY }}
-          CHECK: ${{ secrets.CHECK }}
+
+      - name: Debug environment
+        run: env | grep CHECK
+        env:
+          API_KEY: ${{ secrets.CHECK }}
+
+
 
