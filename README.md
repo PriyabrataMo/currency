@@ -11,7 +11,7 @@ brew install currency
 ```
 
 ### 2. Acquire API Key
-Obtain an API key from ExchangeRatesAPI.io.
+Obtain an API key from [ExchangeRatesAPI.io](https://exchangeratesapi.io/).
 
 ### 3. Set the API Key
 For macOS & Linux:
